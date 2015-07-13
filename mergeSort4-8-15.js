@@ -6,7 +6,7 @@
 //Split up array, and then Merge the sub-components
 //merge(mergeSort([1,3],mergeSort([2])) --> This is recursive approach
 
-//Some arrays for testing
+//Some basic arrays for testing
 
 	var arr1 = [2,11,111,1111];
 	var arr2 = [3,14,100];
