@@ -8,9 +8,9 @@
 
 //Some arrays for testing
 
-	var arr1 = [2,11,111,1111];
-	var arr2 = [3,14,100];
-	var array = [6,2,7,4,1];
+var arr1 = [2,11,111,1111];
+var arr2 = [3,14,100];
+var array = [6,2,7,4,1];
 
 var merge = function(arr1,arr2) {
 	var count1 = 0;
