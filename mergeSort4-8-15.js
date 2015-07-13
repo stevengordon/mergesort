@@ -13,37 +13,37 @@ var arr2 = [3,14,100];
 var array = [6,2,7,4,1];
 
 var merge = function(arr1,arr2) {
-	var count1 = 0;
-	var count2 = 0;
-	var result = [];
+  var count1 = 0;
+  var count2 = 0;
+  var result = [];
 
-	for (var i = 0; i < (arr1.length+arr2.length); i++) {
-		//compare items
-		console.log(count1,count2,i,result.length,result,arr1[count1],arr2[count2]);
+  for (var i = 0; i < (arr1.length+arr2.length); i++) {
+    //compare items
+    console.log(count1,count2,i,result.length,result,arr1[count1],arr2[count2]);
 
-		if ((arr1[count1] <= arr2[count2]) || (arr2[count2]===undefined)) {
-			 //get here if arr1's item is next in line -- and that includes if arr2 has no values left and is giving "undefined" as its next item
-			 result.push(arr1[count1]);
-			 count1++;
-			 
-		} else { //get here if arr2's item is next in line
-			result.push(arr2[count2]);
-			count2++;
-		}
-	}
-	return result;
+    if ((arr1[count1] <= arr2[count2]) || (arr2[count2]===undefined)) {
+       //get here if arr1's item is next in line -- and that includes if arr2 has no values left and is giving "undefined" as its next item
+       result.push(arr1[count1]);
+       count1++;
+       
+    } else { //get here if arr2's item is next in line
+      result.push(arr2[count2]);
+      count2++;
+    }
+  }
+  return result;
 };
 
 var mergeSort = function(arr) {
     //console.log("Arr is ",arr);
-	if (arr.length === 1) {
-		return arr;
-	} else {
-		var firstHalf = arr.slice(0,(arr.length/2));
-		var secondHalf = arr.slice(arr.length/2);
-		//console.log(firstHalf,secondHalf);
-		return merge(mergeSort(firstHalf),mergeSort(secondHalf));
-	}
+  if (arr.length === 1) {
+    return arr;
+  } else {
+    var firstHalf = arr.slice(0,(arr.length/2));
+    var secondHalf = arr.slice(arr.length/2);
+    //console.log(firstHalf,secondHalf);
+    return merge(mergeSort(firstHalf),mergeSort(secondHalf));
+  }
 };
 
 //console.log(mergeSort(array));
